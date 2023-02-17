@@ -1,37 +1,45 @@
 body {
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    font-family: poppins,Lora, sans-serif;
-    list-style-type: none;
-    max-width: 1200px;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: poppins, Lora, Oxygen;
+  list-style-type: none;
+  max-width: 1200px;
 }
-li::marker{
+.rotate {
+  transform: rotateY(180deg);
+}
+li::marker {
   color: white;
-  display: none;
+}
+.iconslist input {
+  font-family:  FontAwesome;
+  font-size: 1.4rem;
+  width: 200px;
 }
 header {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1000;
   width: 100%;
-  height:   3rem;
+  height: 3rem;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   padding: 20px 10%;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-shadow: 0px 0px 10px dimgrey;
   background: white;
   font-family: Oxygen;
 }
- header h3 {
-   padding-left: 13%;
-   font-weight: 600;
-   text-transform: capitalize;
-   font-family: Lora;
+header h3 {
+  padding-left: 13%;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: Oxygen;
+  font-size: 1.8rem;
 }
 .navlist {
   display: flex;
@@ -43,7 +51,7 @@ header {
   text-transform: capitalize;
   color: black;
 }
-.navlist li a:hover{
+.navlist li a:hover {
   color: darkgray;
   transform: scale(0.9);
 }
@@ -62,196 +70,423 @@ header {
   color: darkgray;
 }
 
-/* Product Styles*/
-
-#hero-section img {
-  position: absolute;
-  left: 75%;
-  width: 600px;
-  height: auto;
-  top: 10%;
-  color: white;
-} 
-
-.hero-caption {
-  position: absolute;
-  top: 8%;
+/*Hero section*/
+#hero-section {
+  width: 1200px;
   padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
-.hero-caption h2 {
-  font-size: 4rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-.hero-caption h3 {
-  position: absolute;
-  top: 110%;
-  left: 12%;
-  font-size: 3rem;
-}
-.hero-caption .style {
-  margin-top: 2px;
-  margin-top: -1px;
-  font-style: italic;
-  color: darkslategray;
-  font-weight: 600;
+#hero-section img {
+  width: 450px;
 }
 .hero-btn {
-  border: 1px solid currentColor;
-  background: black;
-  color: white;
   display: inline-block;
-  padding: .8rem;
+  color: white;
+  background: black;
+  padding: .5rem .4rem;
+  font-weight: 300;
 }
 .hero-btn:hover {
-  background: ghostwhite;
+  background: floralwhite;
   color: black;
 }
+.hero-caption {
+  margin-top: 8rem;
+}
+.hero-caption h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: Oxygen;
+  font-size: 2rem;
+}
+.hero-caption p {
+  font-style: italic;
+}
 #hero-btn1 {
-  margin-bottom: .2px;
+  margin-top: .1rem;
+  margin-bottom: 0rem;
 }
 #arrow-btn {
-  padding-left: 1rem;
-  color: white;
+  padding-right: .3rem;
+  padding-left: .3rem;
 }
 
-/*New products*/
-
-.new-release {
-  position: absolute;
-  top: 45%;
-  left: 0;
+/*Popular Styles*/
+.rotate {
+  transform: rotateY(180deg);
+}
+#popular {
   padding: 2rem;
+}
+#popular span {
+  text-decoration-line: overline;
+}
+#popular .title {
+  font-size: 2.5rem;
+  font-family: poppins;
+}
+.wrapper {
   display: grid;
-  grid-template-columns: 1fr  1fr 1fr;
-  grid-gap: 1.5rem;
-  
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.new-release h3 {
-  text-align: center;
-}
-.products {
-  position: relative;
-}
-.products img {
+#popular img {
   width: 400px;
   height: 400px;
 }
-.rotate {
-  transform: rotateY(180deg);
-  width: 570px;
-  height: 570px;
+#popular img:hover {
+  transform: scale(1.15);
+  transition: .5s ease;
+  cursor: pointer;
 }
-.products h4,.products h5{
-  font-size: 2rem;
+.products h3 {
+  margin-bottom: 2px;
+  font-family: Oxygen;
+}
+.products p {
+  margin-top: 1px;
+  font-weight: 300;
+}
+.products h5 {
+margin-top: -1.1rem;
+ font-family: Oxygen;
 }
 
-/* Most Popular Styles*/
-#popular {
-  position: absolute;
-  top: 150%;
-  padding: 2rem;
-}
-.pop-title {
+/*New Styles*/
+#New {
   padding-left: 2rem;
-  font-size: 3rem;
+  width: 1200px;
 }
-.wrapper {
+#new {
   display: flex;
   gap: 1.8rem;
   overflow-x: auto;
-  max-width: 1200px;
 }
-.mpopular h4,.mpopular h5 {
-  font-size: 2rem;
+#New img {
+  width: 700px;
+  height: 700px;
 }
-.mpopular {
+#New .title {
+  font-size: 2.5rem;
+  font-family: poppins;
+}
+.title span {
+  text-decoration-line: overline;
+}
+.newproducts {
   position: relative;
 }
-.mpopular h4 {
+.newproducts .price {
   position: absolute;
-  top: 81%;
+  bottom: 11.6%;
+  padding: 1rem;
+  background: floralwhite;
 }
-.mpopular .price {
-  left: 87%;
+.newproducts h3 {
+  font-family: Oxygen;
 }
-.mpopular i {
+.newproducts i {
   position: absolute;
   top: 5%;
-  right: 5%;
-  font-size: 2rem;
-  color: black;
+  left: 90%;
+  font-size: 1.5rem;
 }
-.mpopular i:hover{
-  color: palevioletred;
+.newproducts i:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: .3s ease;
 }
-
-/* New Arrivals styles */
-#new-arrivals {
-  position: absolute;
-  top: 200%;
-  left: 5%;
+.info  {
+  margin-top: -1.5rem;
+  font-weight: 380;
+}
+/*Trending Styles*/ 
+ .trending {
+   padding: 2rem;
+   font-size: 2rem;
+ }
+ .trending img {
+   margin-left: 270px;
+   margin-right: 300px;
+   margin-top: -4rem;
+   height: 800px;
+ }
+ .trending img:hover {
+   transform: rotate(-30deg);
+   transition: .4s ease;
+ }
+ .trending .title {
+   position: absolute;
+   z-index: 500;
+   font-size: 2.5rem;
+   font-family: poppins;
+ }
+ .trending .info {
+   font-size: 3rem;
+   font-family: Oxygen;
+   font-weight: 500;
+   text-transform: capitalize;
+ }
+ .trending h4 {
+   font-size: 1.5rem;
+ }
+ .trending .checkout {
+   display: inline-block;
+   background: black;
+   color: white;
+   border-radius: 7px;
+   padding: .5rem  .75rem;
+   font-size: 1.5rem;
+   font-family: poppins;
+ }
+ .trending .checkout:hover {
+   background: white;
+   color: black;
+ }
+ .trending li::marker {
+   color: black;
+ }
+  .trending p {
+    width: 1200px;
+  }
+ /*The latest Styles*/
+ .offer {
   padding: 2rem;
-}
-.new{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-#new-arrivals img {
-  width: 550px;
-  height: 550px;
-}
-.newarriv-title {
-  font-size : 3rem;
-  padding-left: 2rem;
-}
-.new h4 {
-  font-size: 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Design*/
-@media (max-width: 720px){
-  body {
-    width: 100%;
+ }
+ .offer .title {
+   font-size: 2.5rem;
+ }
+ .offer img {
+   padding-left: 4rem;
+ }
+ .offer h2 {
+   font-size: 3.5rem;
+   text-align: center;
+   padding-left: 9rem;
+ }
+ .offer p {
+   width: 1200px;
+   font-size: 2rem;
+ }
+ /*Footer section*/
+ .contacts {
+   background: black;
+   padding: 2rem;
+   color: white;
+   width: 1200px;
+   border-bottom: 1px solid grey;
+ }
+ #contacts-page {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   border-bottom: 1px solid grey;
+ }
+ .contacts-page h2{
+   font-weight: 300;
+ }
+ .terms {
+   color: grey;
+   padding-top: 2rem;
+   position: relative;
+ }
+ .sm-icons {
+   position: absolute;
+   left: 80%;
+   display: flex;
+   gap: 1rem;
+   font-size: 2.5rem;
+ }
+ .sm-icons a{
+   color: grey;
+ }
+ .sm-icons a:hover {
+    transform: scale(1.1);
   }
+ .footer {
+   display: flex;
+   gap: 1rem;
+ }
+ 
+ /*Responsive Styles*/
+ 
+@media (max-width: 750px) {
   header {
-    width: 100vw;
+  height: 2.4rem;
+  font-size: 1rem;
+  padding: 1px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+  }
+  header h3 {
+    padding-left: .5%;
+    font-size: 1rem;
+  }
+  .iconslist {
+    display: none;
+  }
+  #hero-section {
     font-size: .5rem;
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 1rem;
-    display: flex;
-    justify-content: space-around;
+    width: 100vw;
   }
-  
-  .hero-caption h2 {
-    font-size: 0.7rem;
+  #hero-section img {
+    position: absolute;
+    top: -2%;
+    left: 40%;
+    margin-bottom: 1rem;
   }
-  
-  
-  
-  
+  .hero-caption {
+    font-size: 1rem;
+    position: absolute;
+    top: 35%;
+    z-index: 100;
+  }
+  .hero-caption h3 {
+    margin-bottom: .5rem;
+  }
+  .hero-caption p {
+    margin-bottom: 1rem;
+  }
+  .hero-btn {
+    padding: .2rem .3rem;
+  }
+  #hero-btn1 {
+    margin-bottom: .1rem;
+  }
+  #popular {
+    position: absolute;
+    top: 80%;
+    padding: 1rem 0rem;
+  }
+  #popular .title {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+  #popular img {
+    width: 375px;
+    height: 375px;
+  } 
+  .products {
+    font-size:  1.2rem;
+    padding-left: -30rem;
+  }
+  .products p {
+    margin-bottom: 1.2rem;
+  }
+  .products h3, .products h5, .products p {
+    padding-left: .5rem;
+  }
+  #New {
+    position: absolute;
+    min-width: 700px;
+    max-width: 750px;
+    top: 510%;
+    font-size: 1rem;
+  }
+  #New img {
+    width: 300px;
+    height: 300px;
+  }
+  #New .title {
+    font-size: 1.6rem;
+  }
+  .newproducts {
+   font-size: 1.2rem;
+   }
+   .newproducts i {
+   font-size: 1rem;
+   }
+  .info {
+   margin-top: -1.3rem;
+   }
+ .newproducts .price {
+    position: absolute;
+    bottom: 19.5%;
+    padding: .5rem;
+    font-size: 1rem;
+   }
+ .trending {
+    position: absolute;
+    top: 570%;
+   }
+ .trending .title {
+    font-size: 1.6rem;
+    z-index: 500;
+   }
+  .trending h4 {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+   }
+  .trending p {
+    width: 100vw;
+    font-size: 1rem;
+  }
+  .trending li {
+    font-size: 1rem;
+  }
+  .trending .checkout {
+    font-size: 1rem;
+  }
+ .trending img {
+    height: 600px;
+    margin-right: 40px;
+    margin-left: 90px;
+    margin-top: 2rem;
+  }
+  .trending .info {
+    font-size: 3.5rem;
+  }
+  .trending p, .trending li {
+    font-size: 1.4rem;
+  }
+  .trending h4, .trending h3, .trending p {
+    width: 600px;
+  }
+  .offer {
+    position: absolute;
+    top: 740%;
+  }
+  .offer .title {
+    font-size: 1.6rem;
+  }
+  .offer img {
+    padding: 2rem;
+    width: 650px;
+    margin-left: -1rem;
+  }
+  .offer p {
+    min-width: 720px;
+    max-width: 750px;
+    font-size: 1.4rem;
+  }
+  .offer h2 {
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    padding-left: 0rem;
+  }
+  .contacts {
+    max-width: 750px;
+    position: absolute;
+    top: 840%;
+    font-size: 1rem;
+  }
+  .contacts-page h2 {
+    font-size: 1.7rem;
+  }
+  .sm-icons {
+    font-size: 1.5rem;
+  }
+  #contacts-page {
+    grid-template-columns: 1fr;
+    font-size: 1.4rem;
+  }
+  .conditions, .footer {
+    font-size: 1.25rem;
+  }
 }
